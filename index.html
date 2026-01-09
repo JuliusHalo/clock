@@ -3,57 +3,121 @@
 <head>
     <title>clock</title>
     <link rel="icon" type="image/png" href="clock.png" style="border-radius: 50%;">
-
     <style>
         body {
             background: #000000;
         }
+        #text {
+            font-family: 'Helvetica', sans-serif;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+        }
         #clock {
             font-family: 'Helvetica', sans-serif;
             color: #ffffff;
-            font-size: 128px;
             text-align: center;
-            margin-top: 20%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 167px;
         }
-        .container {
+        #div1 {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 50vh;
+            margin: 0;
+            border-radius: 6px;
+            font-family: Helvetica, sans-serif;
+            color: #ffffff;
+            font-size: 8px;
+            border: 2px solid #d1d5ff;
+            padding: 8px;
+            width: 4px;
+            height: 4px;
+            text-align: center;
+        }
+
+                #div2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            border-radius: 6px;
+            font-family: Helvetica, sans-serif;
+            color: #ffffff;
+            font-size: 8px;
+            border: 2px solid #d1d5ff;
+            padding: 8px;
+            width: 4px;
+            height: 4px;
+            text-align: center;
         }
     </style>
-
-
-
 </head>
 
 <body>
-    <div class="container">
-        <div id="clock"></div>
-    </div>
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
+    <div id="clock">
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+                }
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+</div>
 
-<div id="clock">
+<div id="text"> 
     <style>
-        #clock {
+        #text {
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
+            color: #505163;
+            font-size: 16px;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            top: 60%;
+        }
+    </style>
+    clock
+</div>
+
+<div id="div1">F
+    <style>
+        #div1 {
             font-family: 'Helvetica', sans-serif;
             color: #d1d5ff;
-            font-size: 167px;
+            font-size: 14px;
             text-align: center;
-            margin-top: 20%;
+            position: relative;
+            left: 45%;
+            top: 67%;
         }
     </style>
 </div>
+
+<div id="div2">S
+    <style>
+        #div2 {
+            font-family: 'Helvetica', sans-serif;
+            color: #d1d5ff;
+            font-size: 14px;
+            text-align: center;
+            position: relative;
+            left: 45%;
+            top: 69%;
+        }
+    </style>
 </body>
 
 </html>
