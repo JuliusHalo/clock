@@ -1,24 +1,36 @@
 <html>
 
-
 <head>
     <title>clock</title>
+    <link rel="icon" type="image/png" href="clock.png" style="border-radius: 50%;">
+
     <style>
         body {
-            background-color: #f0f0f0;
+            background: #000000;
         }
         #clock {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 48px;
+            font-family: 'Helvetica', sans-serif;
+            color: #ffffff;
+            font-size: 128px;
             text-align: center;
             margin-top: 20%;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
     </style>
+
+
+
 </head>
 
 <body>
-    <div id="clock"></div>
+    <div class="container">
+        <div id="clock"></div>
+    </div>
     <script>
         function updateClock() {
             const now = new Date();
@@ -34,17 +46,14 @@
 <div id="clock">
     <style>
         #clock {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 48px;
+            font-family: 'Helvetica', sans-serif;
+            color: #d1d5ff;
+            font-size: 167px;
             text-align: center;
             margin-top: 20%;
         }
-    
     </style>
 </div>
-
-
 </body>
 
 </html>
